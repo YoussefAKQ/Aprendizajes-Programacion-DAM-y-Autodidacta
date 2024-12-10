@@ -1,0 +1,36 @@
+package examen3;
+import java.util.Scanner;
+public class Cadena {
+	private Scanner teclado;
+	private String cadena1,cadena2;
+	
+	public Cadena() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce la primera cadena de caracteres: ");
+		cadena1 = teclado.nextLine();
+		System.out.print("Introduce la segunda cadena de caracteres:");
+		cadena2 = teclado.nextLine();
+	}
+	
+	public void caracter() {
+		int cont1=0;
+		int cont2=1;
+		for (int f=0;f< cadena1.length();f++) {
+			char caracter = cadena1.charAt(f);
+			for(int i=0;i< cadena2.length();i++) {
+				
+			}
+			
+			cont1 = cont1 + 1;
+		}
+	}
+		
+	
+
+	public static void main(String[] args) {
+		Cadena cad= new Cadena();
+		cad.caracter();
+
+	}
+
+}

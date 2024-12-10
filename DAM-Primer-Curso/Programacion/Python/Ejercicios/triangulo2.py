@@ -1,0 +1,45 @@
+#CUADRADO
+def cuadrado():
+    num=int(input("Introduce la medida del cuadrado: "))
+
+#Las multiplicaciones *2 son SOLO porque en el idle ocupan la mitad,
+#el salto de linea ocupa 1 espacio entero
+
+    print(".",end="")       #Borde arriba(mismo codigo que el de abajo)
+    for b in range(num*2-2):  #Le quitas dos porque te va a pintar antes y despues las esquinas
+        print("-",end="")
+    print(".")
+
+    for k in range(num-2):   #Lineas horizontales sin contar con la 1 y ultima
+        print("|",end="")     
+        for x in range(num*2-2):
+            print(" ", end="")
+        print("|",end="")
+        print()
+
+    print(".",end="")       #Borde abajo(mismo codigo que el de arriba)
+    for b in range(num*2-2):
+        print("-",end="")
+    print(".")
+
+#TRIANGULO
+def triangulo():
+    num=int(input("Cuantos pisos quieres que tenga tu triangulo?: "))
+
+    contadora=1      #Se inicializan los dos contadores, el primero es 1 porque es el de arriba
+    contadore=num-1  #Estos son los espacios que se van quitando
+    while contadora<num:    #mientras que contadora sea menor que num
+        for x in range(num):             #num= las lineas que ha dicho el usuario
+            for e in range(contadore):   #contador "E"spacios
+                print(" ", end="")
+            contadore=contadore-1        #Se le va quitando un espacio por cada linea
+        
+            for a in range(contadora):   #contador "A"steriscos
+                print("*", end="")
+            print()
+            contadora=contadora+2        #Se le van sumando dos asteriscos por cada linea
+
+#PROGRAMA PRINCIPAL
+cuadrado()
+triangulo()
+

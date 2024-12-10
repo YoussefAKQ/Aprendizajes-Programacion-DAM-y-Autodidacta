@@ -1,0 +1,97 @@
+---------------------------------------------Qué estudiar para el examen-------------------------------
+Hacer una figura geometrica(Haz un triángulo,cuadrado) y todo lo de abajo
+
+----------------------------------------------Información en general------------------------------------
+while valor!=0  -----> Mientras el valor NO SEA 0
+len ----> la cantidad de caracteres que hay en...
+perimetro cuadrado=lado*4
+area=lado*lado
+----------------------------------------------Para encontrar el mayor/menor valor de la lista-----------
+
+lista=[1,2,3,4,5,6,7,8,9]
+mayor=lista[0]
+for x in range(1,len(lista)):
+	if lista[x]>mayor
+	mayor=lista[x]
+print("El mayor valor es",mayor)
+
+----------------------------------------------Para ordenar la lista-------------------------------------
+
+lista=[1,2,3,4,5,6,7,8,9]
+for x in range(len(lista)):
+	if lista[x]>lista[x+1]:
+		aux=lista[x]
+		lista[x]=lista[x+1]
+		lista[x+1]=aux
+
+----------------------------------------------Diccionarios----------------------------------------------
+
+Para meter en una lista:
+def cargar_datos():
+    lista={} 				          ->Es con llaves {}
+    for x in range(4):
+        print("Persona")
+        dni=input("Introduce el DNI: ")
+        nombre=input("Introduce el nombre: ")
+        lista[dni]=nombre                         -> Mete la clave(DNI) y el resultado(Nombre)
+    return lista
+
+Para printear en una lista:
+def imprimir_datos(lista):
+    for clave in lista:				  ->Con este for recorre toda la lista
+        print(clave,lista[clave])                 ->Pedimos que printee la clave(DNI) y el resultado (Nombre)
+
+def consulta_nombre(lista):			  
+    consulta=input("Introduce tu DNI: ")
+    for clave in lista:                           ->Con este for recorre toda la lista
+        if consulta==clave:			  ->Si la consulta(dato que pedimos) es la clave(DNI)
+            print(lista[clave])			  ->Printeamos el resultado(Nombre) de la clave(DNI) 
+        else:
+            print("El dni que has introducido no está en el diccionario")
+
+OTRO EJEMPLO:
+En este caso imagínate que no sé las asignaturas que tiene cada alumno, con un while podemos hacer que el
+usuario elija cuando parar el bucle con una variable y una pregunta que cambie dicha variable. Introducimos
+estos datos en una lista aparte para posteriormente meterlos en el resultado de la clave en el diccionario.
+Para introducir el resultado en la clave simplemente es con el nombre de la lista, la clave entre corchetes
+y el resultado será la lista que hemos creado, aquí un ejemplo->alumnos[dni]=listamaterias
+
+def cargar_datos():
+    alumnos={}
+    for x in range(3):
+        dni=input("Introduce el numero de dni")
+        listamaterias=[]
+        continua="s"
+        while continua=="s":
+            materia=input("Introduce el nombre de la materia que cursa: ")
+            nota=int(input("Introduce la nota de la materia: "))
+            listamaterias.append((materia,nota))
+            pregunta=input("Quieres meter más materias?[s/n]:")
+            continua=pregunta
+        alumnos[dni]=listamaterias
+    print(alumnos)
+    return alumnos
+
+======================================
+Ahora para imprimir el resultado usamos 2 for ya que no sabemos la cantidad exacta que habrá en cada dni,
+el primer for será para imprimir las claves y el segundo para imprimir lo de dentro de cada clave. 
+
+def imprimir_datos(alumnos):
+    for dni in alumnos:
+        print("Para el dni",dni)
+        for materia,nota in alumnos[dni]:
+            print(materia,nota)
+
+=======================================
+Luego para que el usuario consulte el diccionario tenemos que crear una variable que sea la del dni que 
+consulta. Usamos un for para buscar el DNI dentro del diccionario y un if por si está, si está usamos
+otro for para buscar dentro de ese dni(la clave) esa materia y nota para posteriormente printearlo.
+
+def consulta_notas(alumnos):
+    tudni=input("Introduce el dni a consultar: ")
+    for clave in alumnos:
+        if tudni==clave:
+            for materia,nota in alumnos[clave]:
+                print(materia,nota)
+
+--------------------------------------------------------------------------------------------------------

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/ejer41/src/ejer41/ejer41parte3.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ejer41.ejer41parte3"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="ejer41"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ejer41"/>
+</launchConfiguration>

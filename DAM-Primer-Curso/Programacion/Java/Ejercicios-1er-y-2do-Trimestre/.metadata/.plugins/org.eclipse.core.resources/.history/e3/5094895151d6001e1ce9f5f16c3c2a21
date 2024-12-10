@@ -1,0 +1,6 @@
+package ejer74;
+
+public class Empleado extends Persona {
+	
+
+}

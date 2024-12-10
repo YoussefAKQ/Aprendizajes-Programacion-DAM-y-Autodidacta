@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<table cols="6" rows="6" border="1" width="50%" height="50%">
+<CAPTION> COMBINACIONES</CAPTION>. 
+<TR>
+  <TD ALIGN="CENTER"> 10 </TD> 
+  <TD ALIGN="CENTER"> 11 </TD>
+  <TD ALIGN="CENTER"> 12 </TD> 
+  <TD ALIGN="CENTER"> 13 </TD>
+  <TD ALIGN="CENTER"> 14 </TD> 
+  <TD ALIGN="CENTER"> 15 </TD>
+</TR>
+<TR>
+  <TD ALIGN="CENTER"> 16 </TD> 
+  <TD ALIGN="CENTER"> 17 </TD>
+  <TD ALIGN="CENTER"> 18 </TD> 
+  <TD ALIGN="CENTER"> 19 </TD>
+  <TD ALIGN="CENTER"> 20 </TD> 
+  <TD ALIGN="CENTER"> 21 </TD>
+</TR>
+<TR>
+  <TD ALIGN="CENTER"> 22 </TD> 
+  <TD ALIGN="CENTER"> 23 </TD>
+  <TD ALIGN="CENTER"> 24 </TD> 
+  <TD ALIGN="CENTER"> 25 </TD>
+  <TD ALIGN="CENTER"> 26 </TD> 
+  <TD ALIGN="CENTER"> 27 </TD>
+</TR>
+<TR>
+  <TD ALIGN="CENTER"> 28 </TD> 
+  <TD ALIGN="CENTER"> 29 </TD>
+  <TD ALIGN="CENTER"> 30 </TD> 
+  <TD ALIGN="CENTER"> 31 </TD>
+  <TD ALIGN="CENTER"> 32 </TD> 
+  <TD ALIGN="CENTER"> 33 </TD>
+</TR>
+<TR>
+  <TD ALIGN="CENTER"> 34 </TD> 
+  <TD ALIGN="CENTER"> 35 </TD>
+  <TD ALIGN="CENTER"> 36 </TD> 
+  <TD ALIGN="CENTER"> 37 </TD>
+  <TD ALIGN="CENTER"> 38 </TD> 
+  <TD ALIGN="CENTER"> 39 </TD>
+</TR>
+<TR>
+  <TD ALIGN="CENTER"> 40 </TD> 
+  <TD ALIGN="CENTER"> 41 </TD>
+  <TD ALIGN="CENTER"> 42 </TD> 
+  <TD ALIGN="CENTER"> 43 </TD>
+  <TD ALIGN="CENTER"> 44 </TD> 
+  <TD ALIGN="CENTER"> 45 </TD>
+</TR>
+
+</table
+</body>
+</html>

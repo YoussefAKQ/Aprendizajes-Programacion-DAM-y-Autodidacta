@@ -1,0 +1,10 @@
+package examen3;
+
+public class Cadena {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas SYSTEM "facturasdtd.dtd">
+<facturas>
+    <factura facturaID="1111">
+      <num-fac> 1111</num-fac>
+      <cod_cliente> 32D</cod_cliente>
+      <articulo>
+        <cod_articulo>123</cod_articulo>
+        <nom_articulo>123</nom_articulo>
+        <cantidad>123</cantidad>
+        <precio>123</precio> 
+      </articulo>
+      <articulo>
+        <cod_articulo>321</cod_articulo>
+        <nom_articulo>321</nom_articulo>
+        <cantidad>321</cantidad>
+        <precio>321</precio> 
+      </articulo>
+    </factura>
+</facturas>

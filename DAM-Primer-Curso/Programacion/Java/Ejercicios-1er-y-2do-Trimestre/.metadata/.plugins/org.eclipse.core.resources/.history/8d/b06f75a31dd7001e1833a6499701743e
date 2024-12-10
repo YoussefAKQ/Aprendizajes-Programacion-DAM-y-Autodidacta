@@ -1,0 +1,69 @@
+package ejer76;
+
+import java.util.Scanner;
+
+public class ejer76 {
+	private Scanner teclado;
+	private String frase;
+	
+	public ejer76() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce la frase: ");
+		frase = teclado.nextLine();
+	}
+	
+	public void caracfr() {
+		int cont1=0;
+		for (int f=0;f< frase.length();f++) {
+			char caracter = frase.charAt(f);
+			cont1 = cont1 + 1;
+		}
+		System.out.println("Hay "+cont1+" caracteres");
+	}
+	
+	public void palabfr() {
+		int cont2=1;
+		char caracterbuscado = ' ';
+		for (int f=0;f<frase.length();f++) {
+			if (frase.charAt(f)==caracterbuscado) {
+				cont2 = cont2 + 1;
+				
+			}
+		}
+		System.out.println("Hay "+cont2+" palabras en total");
+		
+	}
+	
+	public void vuelta() {
+        String invertida = new StringBuilder(frase).reverse().toString();
+        System.out.println(invertida);
+			
+		}
+	
+	public void palindromo() {
+		int contador1=0;
+		for (int f=0;f<frase.length();f++) {
+			if (frase.charAt(f)==frase.charAt(frase.length()-1)) {
+				contador1=contador1+1;
+			}
+		}
+		if (contador1==frase.length()) {
+			System.out.println("Es");
+		}else {
+			System.out.println("No es");
+		}
+			
+	}
+
+	
+	public static void main(String[] args) {
+		ejer76 ejer76uno = new ejer76();
+		ejer76uno.caracfr();
+		ejer76uno.palabfr();
+		ejer76uno.vuelta();
+		ejer76uno.palindromo();
+	}
+	
+	
+
+}

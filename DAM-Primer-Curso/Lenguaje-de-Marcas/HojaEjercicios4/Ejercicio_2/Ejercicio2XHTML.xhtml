@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio de selectores</title>
+<style type="text/css">
+#predeterminado{text-decoration:underline; font-weight:normal; color:blue;}
+#enlaceverde{text-decoration:underline; font-weight:normal; color:red}
+#sinsubrayado{text-decoration:none;font-weight:normal;color:blue;}
+#colorrojo{text-decoration:underline; font-weight:normal;color:lightgreen}
+#enlaceimportante{color:blue;font-weight:bold;font-size:19px}
+#enlacedestacado{color:pink;font-weight:bold;background-color:black;}
+#entreparalelas{color:blue;font-weight:normal;border: 1px solid blue; padding: 0,1px;text-decoration:none;}
+#sinsubrayar{text-decoration:none;}
+</style>
+</head>
+<body>
+<div>
+<a href=""><span id="predeterminado">Enlace predeterminado</span></a><br /><br />
+<a href=""><span id="enlaceverde">Este enlace es de color verde</span></a><br /><br />
+<a id="sinsubrayar" href=""><span id="sinsubrayado">Enlace sin subrayado</span></a><br /><br />
+<a href=""><span id="colorrojo">Este enlace es de color rojo</span></a><br /><br />
+<a href=""><span id="enlaceimportante">Este enlace es muy importante</span></a><br /><br />
+<a href=""><span id="enlacedestacado">Enlace destacado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a><br /><br />
+<a id="sinsubrayar" href=""><span id="entreparalelas">Enlace entre paralelas</span></a><br /><br />
+</div>
+
+</body>
+</html>

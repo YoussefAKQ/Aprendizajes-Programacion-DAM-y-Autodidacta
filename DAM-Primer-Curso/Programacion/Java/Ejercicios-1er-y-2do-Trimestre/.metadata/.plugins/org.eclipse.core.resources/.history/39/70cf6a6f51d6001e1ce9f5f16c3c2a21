@@ -1,0 +1,14 @@
+package ejer74;
+
+public class Empleado extends Persona {
+	protected int sueldo;
+	
+	public void cargarsueldo() {
+		
+	}
+
+	public void imprimirsueldo() {
+		
+	}
+	
+}

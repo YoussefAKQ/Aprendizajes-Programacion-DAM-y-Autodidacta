@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style TYPE="TEXT/CSS"> 
+        body {background-color:#0bb;} 
+        * {margin: 10px;} 
+        div {padding: 10px;background-color:#ff0;} 
+        table.clase1 {border-width: 10px; border-color: black; border-style: solid;margin-left: auto;margin-right:auto ; margin-bottom: 0px;} 
+        table.clase2 {border-color: #0f0; border: 2px solid #0f0 } 
+        table.clase3 {border: dotted #f00;} 
+        div.patata {text-align: center;align-items: center;}
+        td.bordes {border: 1px solid rgb(0, 0, 0)}
+        td.bordes2 {border: 1px solid #0f0}
+        td.bordes3 {border: 1px solid #f00}
+        *[align] {text-decoration: underline; font-size: 30px;}
+        table[class="clase1"] {color: #f00; font-size: 20px;}
+        table[class~="clase3"] tr {background-color: rgb(159, 230, 230);}
+        div[align] {background-color:orange; }
+        div[align]  a {background-color:black; text-transform: uppercase; color: white;}
+        ul[circle] li {border: 3px solid rgb(15, 15, 56); padding: 10px; background-color: rgb(159, 230, 230);}
+    </style> 
+ </head>
+    <body>
+        <div class="patata" align>
+            En este primer bloque aparecen tres elementos:<br>
+            Un enlace <a href="https://google.com">Google</a><br>
+            Una tabla de dimensión 2x2<br>
+            <table class="clase1">
+                <caption>TABLA 1</caption>
+                <tr>
+                    <td class="bordes">11111</td>
+                    <td class="bordes">22222</td>
+                </tr>
+                <tr>
+                    <td class="bordes">33333</td>
+                    <td class="bordes">44444</td>
+                </tr>
+            </table><br>
+            Una marquesina
+            <marquee>Tercer elemento del primer párrafo</marquee><br>
+        </div>
+        <div>
+            En este segundo bloque aparecen dos elementos:<br>
+            Una tabla de dimensión 1x5<br>
+            <table class="clase2">
+                <caption>TABLA 2</caption>
+                <tr>
+                    <td class="bordes2">A</td>
+                    <td class="bordes2">B</td>
+                    <td class="bordes2">C</td>
+                    <td class="bordes2">D</td>
+                    <td class="bordes2">E</td>
+                </tr>
+            </table>
+            Una lista numerada:
+            <ol>
+                <li>Ejemplo 1</li>
+                <li>Ejemplo 2</li>
+                <li>Ejemplo 3</li>
+            </ol>
+        </div>
+        <div>
+            En este tercer bloque aparecen tres elementos:<br>
+            Una tabla de dimensión 3x3<br>
+            <table class="clase3">
+                <caption>TABLA 3</caption>
+                <tr>
+                    <td class="bordes3">AAA</td>
+                    <td class="bordes3">BBB</td>
+                    <td class="bordes3">CCC</td>
+                </tr>
+                <tr>
+                    <td class="bordes3">AA</td>
+                    <td class="bordes3">BB</td>
+                    <td class="bordes3">CC</td>
+                </tr>
+                <tr>
+                    <td class="bordes3">A</td>
+                    <td class="bordes3">B</td>
+                    <td class="bordes3">C</td>
+                </tr>
+            </table>
+            Un enlace <a href="">UBUNTU</a><br>
+            Una lista no numerada:
+            <ul circle>
+                <li>Capítulo 1</li>
+                <li>Capítulo 2</li>
+                <li>Capítulo 3</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Los cambios que se deben realizar para que los estilos se realicen desde archivos externos es primero creando un archivo externo,
+después metes los style del HTML al nuevo archivo que será de css, tras eso borras los style del css y linkeas el css en el 
+header con un link. 

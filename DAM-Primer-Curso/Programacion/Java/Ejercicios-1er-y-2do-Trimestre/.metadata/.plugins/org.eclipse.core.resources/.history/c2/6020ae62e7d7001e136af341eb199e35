@@ -1,0 +1,45 @@
+package examen2;
+import java.util.Scanner;
+public class Matriz {
+	private Scanner teclado;
+	private int [][]mat;
+	
+	public void cargar() {
+		teclado= new Scanner(System.in);
+		mat=new int[5][];
+		int cant;
+		cant=teclado.nextInt();
+		for (int f=0;f<5;f++) {
+			mat[f]=new int[cant];
+			for (int c=0;c<cant;c++) {
+				cant=cant +1;
+				System.out.print("Introduce el numero de columnas:");
+				mat[f][c]=teclado.nextInt();
+			}	
+		}
+	}
+	public void rellenar() {
+		System.out.println("Matriz:");
+		int columna=0 + 1;
+	}
+	
+	public void sumatodo() {
+		int sumatotal=0;
+		for (int f=0;f<=10;f++) {
+			for (int c=0;c<=10;c++) {
+				sumatotal = sumatotal + mat[f][c];
+			}
+			
+		}
+		System.out.println("La suma de todos los valores en la matriz es: "+sumatotal);
+	}
+
+
+	public static void main(String[] args) {
+		Matriz mat= new Matriz();
+		mat.cargar();
+		mat.sumatodo();
+
+	}
+
+}

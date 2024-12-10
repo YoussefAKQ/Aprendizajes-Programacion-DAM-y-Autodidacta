@@ -1,0 +1,4 @@
+No he tenido que descargar ningún plugin. Sin embargo para que se inicien automáticamente los audios he
+tenido que configurar la configuración del navegador, al igual que con embed.
+Aparte de eso no he tenido ningún problema cambiándolo. He probado las páginas en brave, opera y chrome 
+y en las 3 ha sido exactamente lo mismo, no he visto ninguna diferencia.

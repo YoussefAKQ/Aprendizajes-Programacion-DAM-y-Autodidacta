@@ -1,0 +1,24 @@
+package ejer18;
+
+import java.util.Scanner;
+
+public class ejer18 {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		int nota,contador=0,contadoralto=0, contadorbajo=0;
+		while (c) {
+			
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

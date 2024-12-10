@@ -1,0 +1,4 @@
+
+* {background-color:lightgreen;}
+td {background-color:lightblue; border: 1px dashed red; padding: 18px; text-align: center;}
+table {border-collapse: collapse; border: 5px solid white;box-shadow: 0 0 0 6px #9DEF85, 0 0 0 12px #FFFFFF;margin-left:15px}

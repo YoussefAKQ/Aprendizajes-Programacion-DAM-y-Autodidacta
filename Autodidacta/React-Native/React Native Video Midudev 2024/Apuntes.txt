@@ -1,0 +1,11 @@
+Las librerías de React de web son las mismas que las de React Native.
+react.dev -> librería
+
+View = div. Los elementos VIEW en React Native son DISPLAY FLEX por defecto.
+TEXT = Todos los textos tienen que estar en TEXT.
+Image = para meter imágenes, hay que importar el componente de Image en el import de react native.       <Image source={icon} style={{ width: 100 , height: 100 }} />
+Button = es el botón nativo del sistema operativo, apenas se puede cambiar ya que ES NATIVO.
+TouchableHighLight = es un botón personalizable entero aunque hay 3 touchables incluido este que no están tan usados, lo mejor para personalizar es pressable que es súper súper personalizable
+
+
+

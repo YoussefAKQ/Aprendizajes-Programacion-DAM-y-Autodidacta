@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(42, 47, 59);
+}
+
+.img1, .img2, .img3, .img4 {
+    width: 200px;
+    height: 200px;
+    border-width: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img1 {
+    border: 7px solid red;
+}
+
+.img2 {
+    border: 7px solid blue;
+}
+
+.img3 {
+    border: 7px solid green;
+}
+
+.img4 {
+    border: 7px solid yellow;
+}
+
+.div1 {
+    position: absolute;
+    color: aqua;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.div2 {
+    position: absolute;
+    color: brown;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.div3 {
+    position: absolute;
+    color: blue;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.div4 {
+    position: absolute;
+    color: yellow;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+}

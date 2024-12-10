@@ -1,0 +1,23 @@
+.absolute {
+    position: absolute;
+    width: 333px;
+    top: 100px;
+    left: 100px;
+
+}
+
+.relativo {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 333px;
+
+}
+
+.flotante {
+    float: left;
+    float: right;
+    width: 333px;
+
+}
+

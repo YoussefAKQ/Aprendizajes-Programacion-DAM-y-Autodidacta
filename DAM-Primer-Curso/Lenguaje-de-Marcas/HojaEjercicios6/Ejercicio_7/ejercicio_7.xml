@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE futbol [
+<!ELEMENT futbol (partido)*>
+<!ELEMENT partido (nombrelocal, nombrevisitante)>
+<!ELEMENT nombrelocal (#PCDATA | goleslocal)*>
+<!ELEMENT nombrevisitante (#PCDATA | golesvisitante)*>
+<!ELEMENT goleslocal (#PCDATA)>
+<!ELEMENT golesvisitante (#PCDATA)>
+]>
+<futbol>
+<partido>
+<nombrelocal>Nottingham Prisas
+<goleslocal>0</goleslocal>
+</nombrelocal>
+<nombrevisitante>Inter Mitente
+<golesvisitante>1</golesvisitante>
+</nombrevisitante>
+</partido>
+<partido>
+<nombrelocal>Vodka Juniors
+<goleslocal>3</goleslocal>
+</nombrelocal>
+<nombrevisitante>Sparta da Risa
+<golesvisitante>3</golesvisitante>
+</nombrevisitante>
+</partido>
+<partido>
+<nombrelocal>Water de Munich
+<goleslocal>4</goleslocal>
+</nombrelocal>
+<nombrevisitante>Esteaua no beberé
+<golesvisitante>2</golesvisitante>
+</nombrevisitante>
+</partido>
+</futbol>

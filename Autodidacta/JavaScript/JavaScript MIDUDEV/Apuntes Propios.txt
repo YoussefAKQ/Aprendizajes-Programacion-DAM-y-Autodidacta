@@ -1,0 +1,757 @@
+https://www.aprendejavascript.dev/
+
+##################################################################################################################################################################
+En JavaScript hay 9 tipos de datos divididos en 2 grandes grupos:
+	-Primitivos: Más atómicos, más sencillos y puros a la hora de definir los tipos de datos. Como por ejemplo: number, string, boolean, null, undefined, symbol, bigint
+	-No primitivos: Objetos, funciones
+
+En JavaScript los números enteros y los números	con comas SE CONSIDERAN AMBOS COMO NÚMEROS y punto, SON EXACTAMENTE LO MISMO.
+
+2 % 2 devuelve el resto que es 0.
+
+3**3 es elevar 3 a la 3, es decir que el resultado es 27.
+
+En las CADENAS DE TEXTO se usan comillas simples, dobles o de acento: 'Hola mundo'
+
+Se pueden concatenar los strings simplemente con un más. Por ejemplo: "Hola" + "Mundo" = 'HolaMundo'
+
+Se pueden comparar dos valores y nos dará de resultado true o false. Como por ejemplo 5 > 3 = true, 5 === 5 = true, 5 !==5 = false.
+También se puede usar con strings para ver si son exactamente lo mismo como por ejemplo: 'JavaScript' === 'JavaScript' = true, 'JavaScript' === 'Java' = false, "JavaScript" !== 'PHP' = true
+Si lo hacemos con < los compara según su valor UNICODE, por lo tanto la letra A es mejor que la letra B, pero las letras mayúsculas tienen valor menor que las letras minúsculas. Por ejemplo 'Alfa' > 'Beta' = false, 'Omega' > 'Beta' = true, 'alfa > 'Alfa' = true.
+Si se comparan booleanos simplemente hay que ser que true es mayor que false.
+
+Si comparamos booleanos con el AND(&&), siempre que se compare algo con false va a dar false como por ejemplo: true && true = true, false && true = false, false && false = false
+Lo contrario para con el ||, siempre que ponga or con true va a dar true
+!true = false
+!false = true
+
+EN JAVASCRIPT NO ES NECESARIO ESPECIFICAR EL DATO AL DECLARAR UNA VARIABLE
+Para crear una variable usamos la palabra reservada: 'let'
+Creamos una variable number: let number = 4
+También podemos crear una variable indefinida con pro ejemplo: let texto
+
+Las constantes const son variables que no puedes ser reasignadas, se crean con const. Por ejemplo const PI = 3.14, al intentar cambiarlo así PI = 3 da error. Y siempre han de ser inicializadas, es decir que siempre que se creen hay que darles un valor -> const RADIO da error. 
+Todas las variables son sensibles a las MAYÚSCULAS Y MINÚSCULAS.
+
+Existen también 2 tipos de datos no nombrados antes, null y undefined. Cada uno de estos tipos de datos solo puede ser o null(de null) y undefined(de undefined). Es decir que SIMPRE null = null, undefined = undefined.
+Null significa que algo NO tiene VALOR, undefined significa que algo AÚN NO HA SIDO DEFINIDO, por ejemplo cuando creamos una variable sin valor se le pone undefined automáticamente. let rolloDePapel sería undefined, también podemos asignarle manualmente el undefined. Sin embargo, para que una variable tenga el valor NULL hay que asignárselo explícitamente. let rolloDePapel = null. NULL SIGNIFICA QUE ALGO VACÍO.
+Ambas cosas son consideradas diferentes, null === undefined -> false. 
+
+##################################################################################################################################################################
+El operador type of nos devuelve un string indicando el tipo asignado a una variable, por ejemplo const MAGIC_NUMBER = 7, typeof MAGIC_NUMBER -> "number".
+También se puede asignar un valor para comprobarlo directamente como aquí abajo.
+typeof undefined -> undefined
+typeof true -> boolean
+typeof 42 -> number
+typeof "Hola mundo"
+Sin embargo, un valor especial, null, el typefor de null devuelve object. Por ejemplo, 
+typeof null -> "object"
+Por eso si queremos ver si una varible es null sería así:
+let variable = null 
+variable === null -> true
+También podemos comprobar con typeof dando el resultado. Sería algo así:
+const age = 42
+typeof age === 'number' -> true
+Podemos encadoenar operadores lógicos para comprobar múltiples condiciones como por ejemplo:
+const age = 42
+typeof age === "number" && age > 18 -> true
+
+##################################################################################################################################################################
+console.log() es una función que sirve para imprimir mensajes en la consola del navegador o del editor de código, se usa para depurar el código y para imprimir valores de variables y mensajes. Se haría así:
+console.log('Hola, JavaScript')
+// -> 'Hola, JavaScript'
+También se puede averiguar el valor de una variable de esta manera:
+const nombre = 'JavaScript'
+console.log(nombre)
+// -> 'JavaScript'
+También podemos concatenar cadenas de texto con una constante, sería algo así:
+const nombre = 'JavaScript'
+console.log('Hola, '+ nombre)
+// -> 'Hola, JavaScript'
+También puedes mostrar varios mensajes y valores en el mismo console.log()
+const nombre = 'JavaScript' 
+const versión = 2023
+console.log(nombre, version)
+// -> 'JavaScript 2023'
+Existen otros métodos para imprimir mensajes en la consola como por ejemplo:
+console.error('Error')
+// X Error
+console.warn('Advertencia')
+// Advertencia
+console.info('Información')
+// i Información
+
+##################################################################################################################################################################
+CONDICIONAL IF:
+Un ejemplo de if:
+if (conducion) {
+	///código
+	///se ejecuta con la condición true
+}
+A continuación voy a crear un condicional que compruebe si alguien es mayor de edad:
+const edad = 18
+if (edad>=18) {
+console.log('Registrado Correctamente')
+} else {
+console.error('No tienes la mayoría de edad')
+}
+Otro ejemplo con if, elseif y por último el else
+if (edad>=18) {
+console.log('Es mayor de edad')
+}else if(edad>=16) {
+console.log('Es casi mayor de edad')
+}else {
+console.log('NO es mayor de edad')
+}
+Ejemplo con $$(and):
+const edad = 17
+const tieneCarnet = true
+
+if (edad >= 18 && tieneCarnet) {
+	console.log('Puedes conducir')
+} else {
+	console.log('No puedes conducir')
+}
+OTRA TÉCNICA MUY interesante es  guardar el resultado de la condición EN UNA VARIABLE:
+const edad = 17
+const tieneCarnet = true
+const puedeConducir = edad >= 18 && tieneCarnet
+
+if (puedeconducir) {
+	console.log('Puedes conducir')
+} else {
+	console.log('No puedes conducir')
+}
+TENER EN CUENTA DE QUE SI EL BLOQUE DE CÓDIGO SOLO TIENE UNA LÍNEA SE PUEDEN OMITIR LAS LLAVES:
+const edad = 17
+if (edad >= 18)
+  console.log('Eres mayor de edad')
+else
+  console.log('Eres menor de edad')
+TAMBIÉN SE PUEDE ESCRIBIR EN UNA SOLA LÍNEA:
+const edad = 18
+if (edad >= 18) console.log('Eres mayor de edad')
+else console.log('Eres menor de edad')
+
+##################################################################################################################################################################
+CONDICIONAL WHILE
+let cuentaAtras = 10
+while (cuentaAtras > 0) {
+cuentaAtras = cuentaAtras - 1
+console.log(cuentaAtras + ' segundos')
+} 
+ATENCION: SI PONES UN WHILE CON UN TRUE COMO CONDICION EL BUCLE SE QUEDA PARA SIEMPRE, EN CAMBIO SI LE PONES FALSE NO SE INICIA NUNCA. Ejemplos:
+while (true) {
+  console.log('¡Hola hasta el infinito!')
+}
+while (false) {
+  console.log('Nunca entro aquí!')
+}
+
+Para controlar cuando queremos salir de un bucle podemos utilizar la palabra BREAK.
+let cuentaAtras = 10
+
+while (cuentaAtras > 0) {
+  console.log(cuentaAtras)
+  cuentaAtras = cuentaAtras - 1
+
+  // si la cuenta atrás es 5, salimos del bucle
+  if (cuentaAtras === 5) {
+    break // <---- salimos del bucle
+  }
+}
+
+También podemos saltar una iteración con continue. Con continue el bucle salta a la siguiente iteración. El código de bajo es para que se salte el paso de imprimir los pares.
+let cuentaAtras = 10
+
+while (cuentaAtras > 0) {
+  cuentaAtras = cuentaAtras - 1
+
+  // si la cuenta atrás es un número par...
+  if (cuentaAtras % 2 === 0) {
+    continue // <---- saltamos a la siguiente iteración
+  }
+
+  console.log(cuentaAtras)
+}
+
+MUY IMPORTANTE: LAS VARIABLES CREADAS dentro de un bucle solo existen dentro de ese bucle. es decir que cuando ese bucle termina esa variable desaparece.
+
+##################################################################################################################################################################
+CONDICIONAL DO WHILE
+El do while a diferencia del while se ejecuta al menos una vez:
+do {
+  // código que se ejecuta al menos una vez
+} while (condición);
+
+confirm se usa para que te salte una notificación en la que puedes elegir una opción u otra. Si elige aceptar la función devuelve true, si elige cancelar la función devuelve false. Por ejemplo: 
+confirm("¿Te gusta JavaScript?");
+
+PODEMOS GUARDAR LA RESPUESTA DEL CONFIRM EN UNA VARIABLE de esta manera:
+let respuesta = confirm("¿Te gusta JavaScript?")
+console.log(respuesta) // -> true o false
+
+##################################################################################################################################################################
+DECLARACIONES
+Son sentencias que definen la creación de una variable, función o clase. Son por así decirlo las instrucciones que le damos a JavaScript para que haga algo. Por ejemplo una declaración de variable es una sentencia que le da un nombre y un valor a una variable:
+let nombre = "Juan"
+
+EXPRESIONES
+Las expresiones son sentencias que producen un valor, pueden ser tan simples como un solo número o una cadena de texto o tan complejas como el cálculo de una operación matemática. Por ejemplo:
+2 + 3 // -> 5
+
+##################################################################################################################################################################
+BUCLES CON FOR:
+for (let number = 1; number <= 10; number++) {
+  console.log(number)
+}
+
+for (let i = 0, j = 5; i < 5; i++, j--) {
+  console.log(i, j);
+}
+
+for (let i = 0; i < 10; i++) {
+  const esPar = i % 2 === 0
+  if (esPar) {
+    continue
+  }
+
+  // Solo mostramos este consola.log si es impar
+  console.log(i)
+
+  // Salimos del bucle al llegar al 7
+  if (i === 7) {
+    break
+  }
+}
+
+ATENTO AQUÍ ABAJO: SI i LLEGA A SER 3 SE SALE DEL BUCLE COMPLETAMENTE
+
+for (let i = 0; i < 10 && i !== 3; i++) {
+  console.log('Hola')
+}
+
+##################################################################################################################################################################
+SWITCH
+
+Switch es una estructura de control. Permite ejecutar diferentes bloques de código dependiendo del valor de una expresión. Suele ir asignado de un brake(que es para salir del bucle) y un default(que es básicamente un else) Por ejemplo:
+const dia = "lunes"
+
+switch (dia) {
+  case "lunes":
+    console.log("¡Hoy es lunes! 😢")
+    break
+
+  default:
+    console.log("No es lunes, YAY! 🚀")
+    break
+}
+
+Podemos usar Date().getDay() para obtener un valor del día de hoy. Por ejemplo:
+const dia = new Date().getDay()
+
+// segun el dia de la semana, mostramos un mensaje diferente
+switch (dia) {
+  case 0:
+    console.log("¡Hoy es domingo! 😴")
+    break
+  case 1:
+    console.log("¡Nooo, es lunes! 😢")
+    break
+  case 2:
+    console.log("¡Hoy es martes! 🥵")
+    break
+  case 3:
+    console.log("¡Hoy es miércoles! 🤓")
+    break
+  default:
+    console.log("Se acerca el fin de! 🚀")
+    break
+}
+
+##################################################################################################################################################################
+FUNCIONES
+
+Las funciones en javascript se pueden definir de varias maneras pero la forma más común y básicaes mediante la palabra clave function. Por ejemplo:
+
+function saludar() {
+   console.log('Hola Miguel')
+}
+
+Para llamar a la función simplemente escribimos su nombre seguido de paréntesis: 
+
+saludar()
+
+Las funcionen pueden devolver un resultado: 
+
+function sumar() {
+  return 1 + 1
+}
+
+const resultado = sumar()	///se puede guardar el resultado dentro de una variableg
+
+console.log(sumar())
+
+Una función con randomg interesante:
+function getRandomNumber() {
+  // recuperamos un número aleatorio entre 0 y 1
+  const random = Math.random() // por ejemplo: 0.6803487380457318
+
+  // lo multiplicamos por 10 para que esté entre 0 y 10
+  const multiplied = random * 10 // -> 6.803487380457318
+
+  // redondeamos hacia abajo para que esté entre 0 y 9
+  const rounded = Math.floor(multiplied) // -> 6
+
+  // le sumamos uno para que esté entre 1 y 10
+  const result = rounded + 1 // -> 7
+
+  // devolvemos el resultado
+  return result
+}
+
+##################################################################################################################################################################
+PARÁMETROS
+Las funciones pueden recibir parámetros para que su comportamiento pueda cambiar según los datos que le proporcionemos. Por ejemplo:
+
+function saludar(nombre) {
+  console.log("Hola " + nombre)
+}
+saludar('Miguel') // -> Hola Miguel
+saludar('Itziar') // -> Hola Itziar
+saludar('Carmen') // -> Hola Carmen
+
+function sumar(a, b) {
+  return a + b
+}
+const resultadoSuma = sumar(2, 3)
+console.log(resultadoSuma) // -> 5
+
+Con return dentro de un condicional, si se da la condición sale de la función directamente y devuelve el valor que le asignemos. Esto se hace de esta manera:
+
+function cocinarMicroondas(plato, tiempo, potencia) {
+  if (plato === '🐥' && tiempo === 1 && potencia === 5) {
+    return '🍗'
+  }
+
+  if (plato === '🥚' && tiempo === 2 && potencia === 3) {
+    return '🍳'
+  }
+
+  return '❌ Plato no soportado'
+}
+
+##################################################################################################################################################################
+Function Expression
+Es una función que SE LE ASIGNA A UNA VARIABLE. Por ejemplo:
+// esto es una function expression
+const sum = function (a, b) {
+  return a + b
+}
+
+// esto es una declaración de función
+function sum(a, b) {
+  return a + b
+}
+
+Con esa function expresión, a la función se le asigna la variable sum. Esto significa que podemos llamar a la función usando el nombre de la varible:
+
+sum(1, 2) // 3
+
+Es muy similar a una función declarada simplemente con function, pero, hay una diferencia muy importante: el hoisting
+El hoisting es un término para describir cómo JavaScript PARECE que mueve las declaraciones de FUNCIONES al principio del código de forma que las puedas usar incluso antes de declararlas. Por ejemplo:
+
+sum(1, 2) // 3
+
+function sum(a, b) {
+  return a + b
+}
+
+Esto de arriba debería dar error pero no, JavaScript asigna en memoria durante la fase de compilación las declaraciones de funciones y por eso al ejecutarse el código tiene acceso a esa posición de memoria a la que se refiere la función. De forma simple sería como si JavaScript moviese las declaraciones de LAS FUNCIONES al principio del código.
+PEEEEEEEEEEERO, EN LAS FUNCTION EXPRESSION NO SE APLICA EL HOISTING. Esto quiere decir que si no declaras la FUNCTION EXPRESSION antes de llamarla VA A DAR UN ERROR. Así:
+sum(1, 2) // ❌ ReferenceError: sum is not defined
+
+const sum = function (a, b) {
+  return a + b
+}
+
+##################################################################################################################################################################
+Arrow FUNCTION
+Básicamente son una forma conscisa de crear funciones en JavaScript, y se han hecho muy populares desde hace unos años por su sintaxis simplificada. Su sintaxis es así:
+
+const miFuncionFlecha = () => {
+  // código a ejecutar
+}
+
+En lugar de la palabra function, utilizamos una flecha => para definir la función. También podemos omitir los paréntesis alrededor de los parámetros si solo tenemos UN PARAMETRO.
+const saludar = nombre => {
+  console.log("Hola " + nombre)
+}
+
+Cuando una función flecha tiene una sola expresión, podemos omitir las llaves {} y la palabra clave return para hacerla aún más corta. Esto se conoce como return implícito. Se puede hacer de esta manera:
+// Declaración de función regular
+function sumar(a, b) {
+  return a + b
+}
+
+// Función flecha
+const sumarFlecha = (a, b) => {
+  return a + b
+}
+
+// Función flecha con return implícito
+const sumarFlecha = (a, b) => a + b
+
+IMPORTANTE, EL RETURN IMPLÍCITO SOLO SE PUEDE APLICAR SI NO USAS LAS LLAVES:
+const sum = (a, b) => { a + b }
+sum(2, 3)
+
+ESTO DE ARRIBA DARÍA ERROR
+
+##################################################################################################################################################################
+Recursividad
+
+La recursividad es una técnica de programación que consiste en que una función se llame así misma, para que no se quede infinita hay que crear una condición base. Esto se hace así:
+function cuentaAtras(numero) {
+  // Condición base: Si el número que recibe es
+  // menor de 0 entonces salimos de la función
+  if (numero < 0) { return }
+
+  // Si el número era mayor o igual a 0, lo mostramos
+  console.log(numero)
+
+  // Y llamamos a la función con el número anterior
+  cuentaAtras(numero - 1)
+}
+
+Esto que hemos hecho arriba es una especie de bucle usando la función. Así es como funciona la recursividad. Si llamamos a la función con el número 3, el resultado será:
+cuentaAtras(3)
+// -> 3
+// -> 2
+// -> 1
+// -> 0
+
+La recursividad se usa muchas veces para solucionar algoritmos. Por ejemplo, vamos a crear una función que calcule el factorial de un número. Sería así:
+
+function factorial(n) {
+  // Condición base: Si el número es 0 o 1, devolvemos 1
+  // y no llamamos a la función de nuevo
+  if (n === 0 || n === 1) {
+    return 1
+  } else {
+    // Si el número es mayor que 1, llamamos a la función
+    return n * factorial(n - 1)
+  }
+}
+
+console.log(factorial(5)) // Resultado: 120
+console.log(factorial(3)) // Resultado: 6
+
+##################################################################################################################################################################
+Arrays: colecciones de elementos
+
+Los arrays son colecciones de datos. Para declarar un array se usan los corchetes [] y dentro los elementos se separan por comas. Por ejemplo:
+[1, 2, 3, 4, 5]
+
+Los elementos de un array pueden ser de cualquier tipo, incluso otros arrays:
+[1, 2, 3, 4, [5, 6, 7, 8, 9]]
+
+y aunque NO ES RECOMENDABLE se pueden mezclar tipos de datos dentro:
+['uno', 2, true, null, undefined]
+
+Para asignar un array a una variable, lo hacemos igual que con los otros tipos de datos:
+const numbers = [1, 2, 3, 4, 5]
+let names = ['Dani', 'Miguel', 'Maria']
+
+Si intentamos acceder a un elemento que no existe, nos devolverá undefined.
+const numbers = [1, 2, 3, 4, 5]
+console.log(numbers[10]) // undefined
+
+OJO,IMPORTANTE, lo normal es que no deje cambiar las variables const, PEEEEEERO, lo que sí se puede cambiar es lo de dentro de dentro de CONST. Un array dentro de const SÍ QUE SE PUEDE CAMBIAR.
+
+##################################################################################################################################################################
+Métodos y propiedades de Array
+Los arrays en JavaScript tienen una serie de métodos y propiedades que nos permiten trabajar con ellos de forma sencilla.
+
+Para conocer la longitud de un array usamos .length Por ejemplo:
+const frutas = ["manzana", "pera", "plátano", "fresa"]
+console.log(frutas.length) // 4
+
+También podemos CORTAR su longitud asignando un nuevo valor de esta manera:
+const frutas = ["manzana", "pera", "plátano", "fresa"]
+frutas.length = 2
+
+console.log(frutas) // ["manzana", "pera"]
+console.log(frutas.length) // 2
+
+El método .push() sirve para añadir un elemento al final de un array y también nos devuelve la nueva longitud del array. Por ejemplo:
+const frutas = ["plátano", "fresa"]
+frutas.push("naranja")
+console.log(frutas) // ["plátano", "fresa", "naranja"]
+
+El método .pop() elimina y devuelve el último elemento de un array:
+const frutas = ["plátano", "fresa", "naranja"]
+const ultimaFruta = frutas.pop()
+console.log(frutas) // ["plátano", "fresa"]
+console.log(ultimaFruta) // "naranja"
+
+El método shift elimina y devuelve el primer elemento de un array. Es lo mismo que .pop() pero con el primer elemento en lugar del último.
+const frutas = ["plátano", "fresa", "naranja"]
+const primeraFruta = frutas.shift()
+console.log(frutas) // ["fresa", "naranja"]
+console.log(primeraFruta) // "plátano"
+
+El método .unshift() añade un elemento al principio de un array. Es lo mismo que .push() pero con el primer elemento en lugar del último.
+const frutas = ["plátano", "fresa", "naranja"]
+frutas.unshift("manzana")
+console.log(frutas) // ["manzana", "plátano", "fresa", "naranja"]
+
+Podemos concatenar(juntar) dos arrays usando el método concat().
+const numbers = [1, 2, 3]
+const numbers2 = [4, 5]
+const allNumbers = numbers.concat(numbers2)
+console.log(allNumbers) // [1, 2, 3, 4, 5]
+
+Otra forma de concatenar es usando el operador … (spread operator) de esta manera:
+const numbers = [1, 2, 3]
+const numbers2 = [4, 5]
+//                    1, 2, 3        4, 5                     
+const allNumbers = [...numbers, ...numbers2]
+console.log(allNumbers) // [1, 2, 3, 4, 5]
+
+##################################################################################################################################################################
+Iteración de Arrays en JavaScript
+
+Con el while se hace de esta manera:
+let frutas = ['🍎', '🍌', '🍓']
+let i = 0 // lo usaremos como índice
+while (i < frutas.length) {
+  console.log(frutas[i]) // imprime el elemento en la posición i
+  i++ // incrementamos el índice en 1 para la siguiente iteración
+}
+
+Con el for se hace de esta manera:
+let frutas = ['🍎', '🍌', '🍓']
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]) // imprime el elemento en la posición i
+}
+
+Aparte del while y del for existe una estructura de control que nos permite iterar sobre los elementos de un array: for...of. Es más simple que for ya que no se necesita crear una variable para guardar el índice del elemento que estamos iterando. Se hace así:
+let frutas = ['🍎', '🍌', '🍓']
+for (let fruta of frutas) {
+  console.log(fruta) // imprime el elemento en la posición i
+}
+
+Ahora un método importante, array.forEach(), que nos permite ejecutar dentro una function para cada uno de los elementos del array. Esta función recibe como parámetros el elemento que se está iterando en ese momento, el índice del elemento y el propio array. Así:
+let frutas = ['🍎', '🍌', '🍓']
+frutas.forEach(function (fruta, index, originalArray) {
+  console.log(fruta) // imprime el elemento en la posición i
+})
+
+Usando arrow function e indicando solo los parámetros que necesitamos se podría simplificar aún más:
+let frutas = ['🍎', '🍌', '🍓']
+frutas.forEach((fruta) => {
+  console.log(fruta) // imprime el elemento en la posición i
+})
+
+##################################################################################################################################################################
+Búsqueda en Arrays con sus métodos
+
+Existen varios métodos en JavaScript que te permiten, buscar dentro de un Array algo específico. Estos métodos incluyes indexOf, some, every, find, findIndex e includes.
+Cada uno de estos métodos tiene un propósito específico y una funcionalidad única. Vamos a explorar cada uno de ellos utilizando un Array de emojis como ejemplo.
+const emojis = ['✨', '🥑', '😍']
+
+El método indexOf te permite encontrar la posición de un elemento dentro de un Array. Si el elemento no existe, entonces retorna -1.
+const emojis = ['✨', '🥑', '😍']
+const posicionCorazon = emojis.indexOf('😍')
+console.log(posicionCorazon) // -> 2
+
+El método includes determina si un Array incluye un determinado elemento, devolviendo true o false según corresponda.
+const emojis = ['✨', '🥑', '😍']
+const tieneCorazon = emojis.includes('😍')
+console.log(tieneCorazon) // -> true
+
+El método some te permite verificar si al menos uno de los elementos de un Array cumple con una condición.
+Para utilizarlo le pasas una función como argumento. Esta función recibe como argumento cada uno de los elementos Array y debe retornar un valor booleano.
+Si al menos uno de los elementos retorna true, entonces el método some retorna true, si no, false.
+const emojis = ['✨', '🥑', '😍']
+const tieneCorazon = emojis.some(emoji => emoji === '😍')
+console.log(tieneCorazon) // -> true
+
+Lo de arriba ya se podía hacer con includes pero some es mucho más potente. Podemos crear funciones más complejas para pasarle al método some. Por ejemplo, podemos crear una función que verifique si un Array contiene un elemento que sea un string de más de 3 caracteres.
+const names = ['Leo', 'Isa', 'Ían', 'Lea']
+const tieneNombreLargo = names.some(name => name.length > 3)
+console.log(tieneNombreLargo) // -> false
+
+El método every te permite verificar si todos los elementos de un Array cumplen una condición. Es como som,e pero en lugar de verificar si al menos uno de los elementos cumple la condición los verifica todos.
+Para utilizarlo, le pasas una función como argumento. Esta función recibe como argumento el elemento del array que está iterando en ese momento y debe retornar un valor BOOLEANO para saber si el elemento ha cumplido con la condición.
+Si todos los elementos retornan true, entonces el método every retorna true. Si al menos uno de los elementos retorna false, entonces el método every retorna false.
+// ¿Todos los emojis son felices?
+const emojis = ['😀', '😂', '😍', '😭', '🥺', '😎']
+const todosSonFelices = emojis.every(emoji => emoji === '😀')
+console.log(todosSonFelices) // -> false
+
+// ¿Todos los números son pares?
+const numbers = [2, 4, 7, 10, 12]
+const todosSonPares = numbers.every(number => number % 2 === 0)
+console.log(todosSonPares) // -> false
+
+// ¿Todos los strings son mayores a 3 caracteres?
+const names = ['Miguel', 'Juan', 'Itziar', 'Isabel']
+const todosLosNombresSonLargos = names.every(name => name.length > 3)
+console.log(todosLosNombresSonLargos) // -> true
+
+El método find te permite encontrar el primer elemento que cumple una condición. Lo interesante es que este método te devuelve el elemento en sí, NO UN VALOR BOOLEANO como some o every. Hay que pasarle una función como argumento que retorne un valor booleano aún así.
+const numbers = [13, 27, 44, -10, 81]
+// encuentra el primer número negativo
+const firstNegativeNumber = numbers.find(number => number < 0)
+console.log(firstNegativeNumber) // -> -10
+Arriba: Si no encuentra ningún elemento que cumpla con la condición, el método find retorna undefined.
+
+El método findIndex es similar a find pero este devuelve el índice del elemento.
+const numbers = [13, 27, 44, -10, 81]
+// encuentra el índice del primer número negativo
+const firstNegativeNumberIndex = numbers.findIndex(number => number < 0)
+console.log(firstNegativeNumberIndex) // -> 3
+// ahora puedes usar el índice para acceder al elemento
+console.log(numbers[firstNegativeNumberIndex]) // -> -10
+
+##################################################################################################################################################################
+Ordenamiento de Arrays en JavaScript
+
+JavaScript proporciona un método llamado .sort() para ordenar sus elementos. Por defecto no es muy útil pero se puede personalizar su comportamiento para que ordene los elementos de manera que necesites.
+
+Por defecto .sort() hace una ordenación un poco extraña. Ordena los números en función de su valor como cadena de texto, no en el valor númerico:
+let numeros = [5, 10, 2, 25, 7]
+numeros.sort()
+console.log(numeros) // [10, 2, 25, 5, 7]
+
+Para personalizar cómo sort ordena los elementos, puedes pasar una función de comparación como argumento. La función de comparación debe devolver:
+-Un VALOR NEGATIVO si el primer argumento debe aparecer antes que el segundo.
+-Un VALOR POSITIVO si el segundo argumento debe aparecer antes que el primero.
+-Cero si ambos argumentos son iguales
+Por ejemplo para ordenar los números de menor a mayor se puede usar la siguiente función de comparación:
+let numeros = [5, 10, 2, 25, 7]
+numeros.sort(function(a, b) {
+  return a - b
+})
+console.log(numeros) // [2, 5, 7, 10, 25]
+
+Para ordenarlos de manera descendente, de mayor a menor, deberías cambiar el orden del return:
+let numeros = [5, 10, 2, 25, 7]
+numeros.sort(function(a, b) {
+  return b - a
+})
+console.log(numeros) // [25, 10, 7, 5, 2]
+
+También podemos usar una arrow function para simplificar el código:
+let numeros = [5, 10, 2, 25, 7]
+numeros.sort((a, b) => a - b)
+
+Como ves, .sort() modifica el array original. Si quieres obtener un array ordenado sin modificar el original, puedes usar el método .toSorted():
+let numeros = [5, 10, 2, 25, 7]
+let numerosOrdenados = numeros.toSorted((a, b) => {
+  return a - b
+})
+console.log(numerosOrdenados) // [2, 5, 7, 10, 25]
+console.log(numeros) // [5, 10, 2, 25, 7]
+
+##################################################################################################################################################################
+Transformación de Arrays en JavaScript
+
+El método filter crea un nuevo array con todos los elementos que devuelven TRUE al ejecutar una función que le pasamos como parámetro. Por ejemplo, podríamos filtrar en un nuevo array todos los números pares de un array de números:
+const numbers = [1, 2, 3, 4, 5, 6, 7]
+const evenNumbers = numbers.filter(function (number) {
+  return number % 2 === 0
+})
+console.log(evenNumbers) // [2, 4, 6]
+
+O también quedarnos con todas las cadenas de texto que tengan la letra a:
+const strings = ['hola', 'adiós', 'casa', 'coche', 'perro', 'gato']
+// en las cadenas de texto podemos usar el método `includes`
+// para saber si una cadena contiene otra:
+const stringsWithA = strings.filter(string => string.includes('a'))
+console.log(stringsWithA) // ['hola', 'adiós', 'casa', 'gato']
+
+El método map crea un nuevo array de la misma longitud que el original, pero con los elementos transformados por una función que le pasamos como parámetro. Así que la función recibirá cada elemento del array y tendremos que devolver el elemento transformado. Por ejemplo, podríamos crear un array con el doble de cada número de un array de números:
+const numbers = [1, 2, 3]
+const doubleNumbers = numbers.map((number) => {
+  return number * 2
+})
+console.log(doubleNumbers) // [2, 4, 6]
+
+O también se podría crear un array con la longitud de cada cadena de texto de un array de cadenas:
+const strings = ['hola', 'javascript', 'midu', 'programación']
+const stringsLength = strings.map((string) => string.length)
+console.log(stringsLength) // [4, 10, 4, 12]
+
+map + filter. En JavaScript podemos crear un encadenamiento de métodos. De esta forma, si un método devuelve un array, podemos llamar a otro método sobre ese array sin necesidad de guardarlo en una variable. Imagina que queremos crear un array con el doble de los números y sólo quedarnos con los que sean mayores que 5:
+const numbers = [1, 2, 3, 4, 5, 6, 7]
+const numsGreaterThanFive = numbers
+  .map(number => number * 2) // [2, 4, 6, 8, 10, 12, 14]
+  .filter(number => number > 5) // [6, 8, 10, 12, 14]
+console.log(numsGreaterThanFive) // [6, 8, 10, 12, 14]
+
+Esto también se podría hacer al revés:
+const numbers = [1, 2, 3, 4, 5, 6, 7]
+const doubleEvenNumbers = numbers
+  .filter(number => number % 2 === 0) // [2, 4, 6]
+  .map(number => number * 2) // [4, 8, 12]
+console.log(doubleEvenNumbers) // [4, 8, 12]
+
+El método reduce es un poco más complejo. Este método permite crear un único valor a partir de un Array. 
+Recibe dos parámetros: una función que se ejecutará por cada elemento y un valor inicial, opcional, que será donde podemos acumular los valores.
+El primer parámetro de reduce, que es la función que se ejecutará por cada elemento, recibe tres parámetros:
+	-El acumulador: el valor que se va a ir acumulando en cada iteración
+	-El elemento actual: el elemento del Array que estamos iterando en ese momento.
+	-El índice: la posición del elemento actual en el Array
+Y debe devolver el valor que se va a acumular en cada iteración.
+Un caso de uso muy típico de reduce es sumar todos los elementos de un Array:
+const numbers = [1, 2, 3]
+const sum = numbers.reduce((accumulator, currentNumber) => {
+  return accumulator + currentNumber
+}, 0) // <- el 0 es el valor inicial
+console.log(sum) // 6
+
+Podríamos usar map y filter junto a un reduce para evitar un array intermedio. Por ejemplo, imagina que queremos doblar los números pares y solo quedarnos con los mayores de 5:
+const numbers = [1, 2, 3, 4, 5, 6, 7]
+const doubleEvenNumbers = numbers.reduce((accumulator, currentNumber) => {
+  const isEven = currentNumber % 2 === 0
+  const doubled = currentNumber * 2
+  const isGreaterThanFive = doubled > 5
+  // si es par y mayor que 5, lo añadimos al array
+  if (isEven && isGreaterThanFive) {
+    // para ello devolvemos un nuevo array con el valor actual
+    return accumulator.concat(doubled)
+  } else {
+    // si no, devolvemos lo que ya teníamos
+    return accumulator
+  }
+}, []) // <- el array vacío es el valor inicial
+console.log(doubleEvenNumbers) // [8, 12]
+
+##################################################################################################################################################################
+Matrices
+En matemáticas y en programación, una matriz se refiere a una colección de elementos dispuestos en filas y columnas. En términos más sencillos y en JavaScript, podemos representar una matriz como un array de arrays.
+
+Para empezar, aquí se muestra cómo se puede crear una matriz simple de 2x3 en JavaScript:
+const matriz = [
+  [1, 2, 3],
+  [4, 5, 6]
+]
+
+Para acceder a los elementos de una matriz, necesitaremos utilizar dos índices: uno para la fila y otro para la columna.
+Por ejemplo si queremos acceder al número 6 en la matriz anterior lo haríamos de la siguiente manera:
+let numero = matriz[1][2]
+console.log(numero) // -> 6
+Aquí, el primer índice, [1], se refiere a la segunda fila (recuerda que los arrays en JavaScript tienen un índice base cero), y el segundo índice, [2], se refiere a la tercera columna.
+
+Podemos utilizar bucles anidados para iterar sobre todos los elementos de una matriz. Aquí hay un ejemplo de cómo hacerlo utilizando un bucle for:
+for (let i = 0; i < matriz.length; i++) { // {1}
+  for (let j = 0; j < matriz[i].length; j++) { // {2}
+    console.log(matriz[i][j])
+  }
+}
+
+
+

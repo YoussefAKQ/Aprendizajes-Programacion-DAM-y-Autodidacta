@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE futbol [
+<!ELEMENT futbol (partido)*>
+<!ELEMENT partido EMPTY>
+<!ATTLIST partido nombrelocal CDATA #REQUIRED>
+<!ATTLIST partido nombrevisitante CDATA #REQUIRED>
+<!ATTLIST partido goleslocal CDATA #REQUIRED>
+<!ATTLIST partido golesvisitante CDATA #REQUIRED>
+]>
+<futbol>
+<partido nombrelocal="Nottingham Prisas" nombrevisitante="Inter Mitente" goleslocal="0" golesvisitante="1" />
+<partido nombrelocal="Vodka Juniors" nombrevisitante="Sparta da Risa" goleslocal="3" golesvisitante="3" />
+<partido nombrelocal="Water de Munich" nombrevisitante="Esteaua no beberé" goleslocal="4" golesvisitante="2" />
+</futbol>

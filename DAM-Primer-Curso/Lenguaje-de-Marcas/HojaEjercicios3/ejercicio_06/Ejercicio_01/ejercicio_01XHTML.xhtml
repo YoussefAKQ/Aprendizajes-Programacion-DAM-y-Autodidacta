@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3c.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="es">
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+ <title>Ejercicio 1 en XHTML </title>
+</head>
+<body>
+<h1>Datos personales:</h1>
+<hr />
+<form action="mailto:" method="post" enctype="text/plain">
+	<div>	
+	Nombre: <br />
+	<input type="text" name="nombre" maxlength="20" /><br /><br />
+	Apellidos:<br />
+	<input type="text" name="apellidos" size="40" maxlength="40" /><br /><br />
+	</div>
+	<div>
+	Esto civil(3 opciones):
+	<select name="estadocivil">
+		<option>Solter@</option>
+		<option>Casad@</option>
+		<option>Viud@</option>
+	</select>
+	</div>
+	<div>
+	<br /><br />Sexo:<br />
+	<input type="radio" name="sexo" value="Hombre" />Hombre
+	<input type="radio" name="sexo" value="Mujer" />Mujer
+	<br /><br /><br /><br />
+	</div>
+	<div>
+	<hr />
+	<input type="submit" value="Enviar datos" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="reset" value="Borrar datos" />
+	<hr />
+	</div>	
+</form>
+</body>
+</html>

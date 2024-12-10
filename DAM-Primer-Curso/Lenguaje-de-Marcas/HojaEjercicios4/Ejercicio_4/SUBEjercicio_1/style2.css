@@ -1,0 +1,9 @@
+* { font: 1/1.6em ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;              
+  }
+#primero p { color: #1f9275; }
+#primero em { background: #FFFFCC; padding: .2em; }
+a { color: #683d2e; }
+p { color: #d4b1b1; }
+em.especial { background: #FFCC99; border: 1px solid #9c7842; padding: .1em; }
+.normal span { font: weight 100px;; }

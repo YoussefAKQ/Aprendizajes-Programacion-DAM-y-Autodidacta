@@ -1,0 +1,9 @@
+
+#predeterminado{text-decoration:underline; font-weight:normal; color:blue;}
+#enlaceverde{text-decoration:underline; font-weight:normal; color:red}
+#sinsubrayado{text-decoration:none;font-weight:normal;color:blue;}
+#colorrojo{text-decoration:underline; font-weight:normal;color:lightgreen}
+#enlaceimportante{color:blue;font-weight:bold;font-size:19px}
+#enlacedestacado{color:pink;font-weight:bold;background-color:black;}
+#entreparalelas{color:blue;font-weight:normal;border: 1px solid blue; padding: 0,1px;text-decoration:none;}
+#sinsubrayar{text-decoration:none;}

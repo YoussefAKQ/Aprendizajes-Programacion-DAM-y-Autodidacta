@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="estilo.css"?>
+<!DOCTYPE facturas SYSTEM "facturasdtd.dtd">
+<facturas>
+    <factura facturaID="1111">
+      <num-fac>Factura: 1</num-fac>
+      <cod_cliente>Cliente: 0011</cod_cliente>
+      <articulo>
+        ARTICULO: 
+        <cod_articulo>Codigo: 0001</cod_articulo>
+        <nom_articulo>Nombre:PAN</nom_articulo>
+        <cantidad>Cantidad: 2</cantidad> 
+        <precio>Precio: 3</precio> 
+      </articulo>
+    </factura>
+    <factura facturaID="2222">
+      <num-fac> Factura: 2</num-fac>
+      <cod_cliente> Cliente: 0055</cod_cliente>
+      <articulo>
+        ARTICULO: 
+        <cod_articulo>Codigo: 002</cod_articulo>
+        <nom_articulo>Nombre: AGUA</nom_articulo>
+        <cantidad>Cantidad: 4</cantidad>
+        <precio>Precio: 5</precio> 
+      </articulo>
+    </factura>
+    <factura facturaID="3333">
+      <num-fac> Factura: 3</num-fac>
+      <cod_cliente> Cliente: 0023</cod_cliente>
+      <articulo>
+        <cod_articulo>Codigo: 003</cod_articulo>
+        <nom_articulo>Nombre: Pescado</nom_articulo>
+        <cantidad>Cantidad: 1</cantidad>
+        <precio>Precio: 10</precio> 
+      </articulo>
+    </factura>
+</facturas>

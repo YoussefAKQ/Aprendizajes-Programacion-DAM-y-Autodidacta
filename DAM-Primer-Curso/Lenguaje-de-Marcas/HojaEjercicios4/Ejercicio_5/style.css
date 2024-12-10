@@ -1,0 +1,112 @@
+* {
+background-color:blue;
+}
+
+.primercuadrado {
+background-color:white;
+float: left;
+width: 300px;
+height: 525px;
+padding: 22px;
+
+}
+
+.segundocuadrado {
+background-color:white;
+float:left;
+margin-left:5px;
+width: 300px;
+height: 525px;
+padding: 22px;
+
+}
+
+.parte1 {
+background-color: gray;
+color: yellow;
+width: 240px;
+padding: 15px;
+font-weight: 100;
+margin-top:2px ;
+}
+
+.parte2 {
+    background-color: gray;
+    color: yellow;
+    width: 100px;
+    padding: 15px;
+    float: left;
+    margin-left:5px;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 2px;
+
+}
+
+.parte3 {
+    background-color: gray;
+    color: yellow;
+    width: 55px;
+    padding: 15px;
+    float: left;
+    margin-left:5px;
+    font-weight: 300;
+    text-decoration: underline;
+    margin-top: 2px;
+}
+
+.parte4 {
+    background-color: gray;
+    color: yellow;
+    width: 32px;
+    padding: 15px;
+    float: left;
+    margin-left:5px;
+    font-weight: 400;
+    text-decoration:underline overline;
+    margin-top: 2px;
+}
+
+
+.parte5 {
+    background-color: gray;
+    color: yellow;
+    width: 35px;
+    padding: 15px;
+    float: left;
+    margin-left:5px;
+    font-weight: 500;
+    text-decoration: underline overline line-through;
+    margin-top: 2px;
+}
+
+.parte6 {
+    background-color: gray;
+    color: yellow;
+    width: 240px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 2px;
+
+}
+
+.parte7 {
+    background-color: gray;
+    color: yellow;
+    width: 240px;
+    padding: 15px;
+    margin-top: 2px;
+    text-indent: 50px;
+
+}
+
+.parte8 {
+    background-color: gray;
+    color: yellow;
+    width: 240px;
+    padding: 15px;
+    margin-top: 2px;
+    text-indent: 1cm;
+    text-align: justify;
+
+}

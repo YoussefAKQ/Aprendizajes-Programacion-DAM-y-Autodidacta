@@ -1,0 +1,45 @@
+package ejer18;
+
+import java.util.Scanner;
+
+public class ejer18 {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		int nota,contador=0,contadoralto=0, contadorbajo=0;
+		float altura=0,sumaalturas=0,n=0, contador2=0, promedioalturas=0;
+		///Parte 1 ---------------------------------------------------------
+		while (contador<10) {
+			System.out.println("Introduce la nota: ");
+			nota = teclado.nextInt();
+			contador=contador+1;
+			if (nota>=7) {
+				contadoralto=contadoralto+1;
+			}
+			else {
+				contadorbajo=contadorbajo+1;
+			}
+		}
+		System.out.println("Alumnos con 7 o más: ");
+		System.out.println(contadoralto);
+		System.out.println("Alumnos con menos de 7 ");
+		System.out.println(contadorbajo);
+		
+		
+		///Parte 2 -----------------------------------------------------------
+		System.out.print("Introduce la cantidad de alturas");
+		n = teclado.nextFloat();
+		while (n>contador2) {
+			contador2=contador2+1;
+			System.out.println("Introduce la altura: ");
+			altura = teclado.nextFloat();
+			sumaalturas=sumaalturas+altura;
+		}
+		System.out.println("El promedio de alturas es:");
+		promedioalturas=sumaalturas/n;
+		System.out.println(promedioalturas);
+		
+		///Parte 3 --------------------------------------------------------------
+		
+	}
+
+}

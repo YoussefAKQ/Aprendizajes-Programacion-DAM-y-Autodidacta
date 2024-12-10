@@ -1,0 +1,3 @@
+Los frames son incompatibles con XHMTL y los src de iframes con XHTML normal.
+He cambiado el formato de XHTML normal a XHTML Strict y he cambiado los frames normales a 
+iframes, se ven diferentes.

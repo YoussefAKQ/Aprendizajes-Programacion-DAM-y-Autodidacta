@@ -1,0 +1,36 @@
+package com.zetcode;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+
+public class SocketTimeClient {
+
+    public static void main(String[] args) throws IOException {
+
+        var hostname = "es.pool.ntp.org";
+        int port = 123; // Puerto correcto para NTP
+        int maxConnections = 10; // Limitar el número de conexiones
+
+        for (int x = 0; x < maxConnections; x++) {
+            try (var socket = new Socket(hostname, port)) {
+
+                try (var reader = new InputStreamReader(socket.getInputStream())) {
+
+                    int character;
+                    var output = new StringBuilder();
+
+                    while ((character = reader.read()) != -1) {
+
+                        output.append((char) character);
+                    }
+
+                    System.out.println(output);
+                }
+
+            } catch (Exception e) {
+                System.out.println("No va");
+            }
+        }
+    }
+}

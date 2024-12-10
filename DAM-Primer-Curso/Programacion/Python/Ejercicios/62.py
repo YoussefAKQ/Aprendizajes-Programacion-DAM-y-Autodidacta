@@ -1,0 +1,5 @@
+nombre=input("Introduce un nombre:")
+print("primer caracter")
+print(nombre[0])
+print("Cantidad de letras del nombre:")
+print(len(nombre))

@@ -1,0 +1,6 @@
+<!ELEMENT recetas (receta*)>
+<!ELEMENT receta (ingrediente*,propietario)>
+<!ELEMENT propietario (#PCDATA)>
+<!ELEMENT ingrediente (#PCDATA)>
+<!ATTLIST receta precio CDATA #REQUIRED>
+<!ATTLIST receta nombre CDATA #REQUIRED>

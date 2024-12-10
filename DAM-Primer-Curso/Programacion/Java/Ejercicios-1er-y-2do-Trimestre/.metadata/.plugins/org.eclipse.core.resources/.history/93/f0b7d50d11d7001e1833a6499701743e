@@ -1,0 +1,20 @@
+package ejer75;
+
+import java.util.Scanner;
+
+public class vertice {
+	private Scanner teclado;
+	private int [][] mat;
+	
+	public vertice() {
+		Scanner teclado = new Scanner(System.in);
+		mat = new int[3][3];
+		for (int f=0;f<3;f++) {
+			for (int c=0;f<3;f++) {
+				System.out.println("Introduce el valor: ");
+			}
+			
+		}
+	}
+
+}

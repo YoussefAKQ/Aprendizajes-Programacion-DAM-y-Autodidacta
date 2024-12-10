@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE recetas SYSTEM "recetas.dtd">
+<recetas>
+<receta nombre="Paella" precio="10">
+<ingrediente> Arroz </ingrediente>
+<ingrediente> Sepia </ingrediente>
+<ingrediente> Gambas </ingrediente>
+<propietario>Pilar</propietario>
+</receta>
+<receta nombre="Tortilla" precio="10">
+<ingrediente> Huevos </ingrediente>
+<ingrediente> Patata </ingrediente>
+</receta>
+</recetas>

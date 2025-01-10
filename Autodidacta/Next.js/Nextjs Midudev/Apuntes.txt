@@ -1,0 +1,66 @@
+###################################IMPORTACIÓN DE CUALQUIER FUENTE DE GOOGLE FONTS###################################
+
+/// se crea un route.ts con lo siguiente:
+import { Montserrat } from 'next/font/google'			///importas la que quieras
+export const montserrat = Montserrat({subsets: ['latin']})
+
+/// la usas en el layout de tu página para aplicar la fuente en todos lados
+import { montserrat } from './ui/fonts';
+import './ui/global.css';
+
+///resto del código
+      <body className={`${montserrat.className} antialiased`}>
+///resto del código
+
+///SE PUEDEN IMPORTAR VARIAS FUENTES A LA VEZ EN EL ROUTE, tan solo hay que importarlas debidamente donde correspondan
+
+###############################################OPTIMIZACIÓN DE IMPORTACIÓN DE IMÁGENES ####################################
+///Hay una forma para poner imágenes de una forma más optimizada, usando el componente Image de next. Se haría así:
+import Image from 'next/image';
+          <Image 
+            src='/hero-desktop.png' 
+            alt="Screenshots of the dashboard"
+            width={1000}
+            height={760}
+          />
+
+///Hay que tener en cuenta de que algunos componentes requieren atributos como éste nos pide el width obligatoriamente para que funcione. Este componente es muy útil para optimizar la imagen bajando el tamaño y adaptando el tipo de imagen óptimamente al navegador
+
+############################################### RESPONSIVE = OCULTAR IMAGEN ####################################
+///Una forma de ocultar o manipular algo cuando se ve la web desde el móvil podría ser esta:
+          <Image 
+            src='/hero-desktop.png' 
+            alt="Screenshots of the dashboard"
+            width={1000}
+            height={760}
+            className='hidden md:block'				///SE VE EN DESKTOP PERO NO EN MÓVIL
+          />
+          <Image 
+            src='/hero-mobile.png' 
+            alt="Screenshots of the dashboard"
+            width={1000}
+            height={760}
+            className='block md:hidden'				///SE VE EN MÓVIL PERO NO EN DESKTOP
+          />
+
+///si ponemos esto en la imagen de arriba por ejemplo haremos que cuando la página se ve desde el móvil oculte la imagen
+
+#################################DATO IMPORTANTE SOBRE LAS SUBCARPETAS############################################
+///para crear una página nueva tiene que ir sí o sí dentro de una carpeta, al igual que cada carpeta tiene que tener un page.tsx o un page.jsx
+##############################################################################################
+Para que no recargue toda la página y se pierda rendimiento de la página se puede usar un componente de nextjs llamado Link.
+          <Link
+            key={link.name}
+            href={link.href}
+            className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
+          >
+            <LinkIcon className="w-6" />
+            <p className="hidden md:block">{link.name}</p>
+          </Link>
+
+De esta forma solo carga lo que necesita, carga lo mínimo innecesario indispensable. La velocidad es súper notoria. 
+##############################################################################################
+Si da un error de use client es porque hemos usado un componente que solo funciona en local. Es para acceder a algo en el que solo se puede acceder con el cliente. Es como decir que este componente también queremos que funcione en el cliente.
+
+Code splitting = se sirve el código según lo que necesite el usuario, no nada más entrar a la página. Lo hace nextjs automáticamente.
+

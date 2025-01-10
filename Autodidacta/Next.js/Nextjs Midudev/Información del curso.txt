@@ -1,0 +1,5 @@
+Vídeo de midudev de Nextjs 14:
+https://youtu.be/jMy4pVZMyLM?si=XBcOcFmWjaqyjEtX
+
+Curso impartido por vercel:
+https://nextjs.org/learn

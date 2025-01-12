@@ -1,0 +1,16 @@
+<p>Esto es un párrafo</p>
+
+<!-- Así se hacen los comentarios -->
+
+<main>
+  <p> En el main ponemos todo el contenido principal de la página </p>
+</main>
+
+<img src="https://DeEstaFormaAñadimosUnaImagenConSuEnlaceCorrespondiente.com" />
+
+<img src="cat.jpg" alt="TODAS LAS IMAGENES DEBERÍAN TENER UN ALT, muestra el texto si la imagen no carga, mejora accesibilidad">
+
+<a href="https://a-SeUsaParaLinkear.com">A se usa para linkear</a>
+
+<a href="https://www.freecodecamp.org" target="_blank">CON TARGET_BLANK la pestaña se abre aparte</a>
+

@@ -1,0 +1,86 @@
+<p>Esto es un párrafo</p>
+
+<!-- Así se hacen los comentarios -->
+
+<main>
+  <p> En el main ponemos todo el contenido principal de la página </p>
+</main>
+
+<img src="https://DeEstaFormaAñadimosUnaImagenConSuEnlaceCorrespondiente.com" />
+
+<img src="cat.jpg" alt="TODAS LAS IMAGENES DEBERÍAN TENER UN ALT, muestra el texto si la imagen no carga, mejora accesibilidad">
+
+<a href="https://a-SeUsaParaLinkear.com">A se usa para linkear</a>
+
+<a href="https://www.freecodecamp.org" target="_blank">CON TARGET_BLANK la pestaña se abre aparte</a>
+
+<section>
+  <h2>Sección 1</h2>
+  <p>Contenido de la sección</p>
+</section>
+
+<ul>Esto es una lista desordenada
+  <li>Elemento de la lista 1</li>
+  <li>Elemento de la lista 2</li>
+  <li>Elemento de la lista 3</li>     
+</ul>
+
+El elemento <figure></figure>g representa contenido independiente y te permitirá asociar una imagen a una descripción.
+
+<figcaption>Esto sirve para anidar una leyenda a una imagen</figcaption>
+
+<em>Este texto está en cursiva</em>
+
+<strong>Este texto está en boldg</strong>
+
+<form action="https://aquísesubenlosdatos">
+  <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+</form>
+
+<button type="submit">Submit</button>
+
+<label><input id="valor único" type="radio">Label es para asociar el txt con el input</label>
+
+Para que dos elementos radio no se puedan seleccionar a la ves se les asigna el mismo name:
+          <label><input id="indoor" type="radio" value="indoor" name="indoor-outdoor"> Indoor</label>
+          <label><input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label>
+
+
+Fieldset es para agrupar los elementos input, value para subir los archivos de una mejor manera al servidor:
+<fieldset>
+          <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+          <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+</fieldset>
+
+Mediante legend podemos darle una especie de encabezado a los fieldset:
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+
+
+<input type="checkbox" id="hola"> Checkbox
+
+
+El footer se define con <footer></footer>
+
+<a href="con esto linkeas algo"></a>
+
+El elemento head se usa para contener metadatos sobre el documento como títulos, enlaces a hojas de estilo, scripts
+<html lang="en">
+  <head>
+    <title>CatPhotoApp</title>
+  </head>
+  <body>
+
+
+Doctype indica que es un documento HTML5:
+<!DOCTYPE html>
+<html lang="en">
+
+Meta sirve para indicar al navegador cómo codificar los caracteres en la página:
+ <head>
+    <meta charset="utf-8">    
+    <title>CatPhotoApp</title>
+  </head>

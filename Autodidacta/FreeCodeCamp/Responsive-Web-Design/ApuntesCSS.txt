@@ -1,0 +1,42 @@
+El <style></style> se usa en el head.
+ <style>
+      h1,h2,p {
+        text-align:center;
+      }
+ </style>
+
+Con un archivo externo de CSS no habría que poner un style. En dicho archivo se pondrían los elementos con sus características correspondientes.
+Para linkearlo sería metiendo el link en el head:
+    <link rel="stylesheet" href="styles.css"/>
+
+Para qué sirve el div? El div es para diseñar diferenciando de otros elementos de contenido
+
+Para referenciar los ids del HTML al CSS sería con #:
+#menu {
+  width: 300px;
+}
+
+Comentarios:
+/* comment here */
+
+De esta manera puedes centrar automáticamente un div:
+#menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+Lo más común es referenciar los elementos con . que referencia class="menú" en el HTML. Class es para agrupar un conjunto de cosas, en cambio id es para un cosa en específico.
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+Una forma de hacer que varios <p> se pongan en la misma línea sería con "display:inline-block;":
+.item p {display:inline-block;}
+
+
+

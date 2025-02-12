@@ -30,7 +30,7 @@ De esta manera puedes centrar automáticamente un div:
 Lo más común es referenciar los elementos con . que referencia class="menú" en el HTML. Class es para agrupar un conjunto de cosas, en cambio id es para un cosa en específico.
 .menu {
   width: 80%;
-  background-color: burlywood;
+  background-color: burlywood;g
   margin-left: auto;
   margin-right: auto;
 }
@@ -38,5 +38,9 @@ Lo más común es referenciar los elementos con . que referencia class="menú" e
 Una forma de hacer que varios <p> se pongan en la misma línea sería con "display:inline-block;":
 .item p {display:inline-block;}
 
-
+Para aplicar un Font diferente se puede usar el font-family:
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family:sans-serif;
+}
 
